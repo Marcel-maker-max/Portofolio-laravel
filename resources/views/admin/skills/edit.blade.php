@@ -1,7 +1,7 @@
 <x-admin-layout>
     <h1 class="text-4xl font-bold mb-8">Modifier la Compétence</h1>
 
-    <form action="{{ route('skills.update', $skill) }}" method="POST" class="glass p-8 max-w-2xl">
+    <form action="{{ route('admin.skills.update', $skill) }}" method="POST" class="glass p-8 max-w-2xl">
         @csrf
         @method('PUT')
 
@@ -31,7 +31,7 @@
 
         <div class="flex gap-4">
             <button type="submit" class="btn btn-primary">Mettre à jour</button>
-            <a href="{{ route('skills.index') }}" class="btn btn-secondary">Annuler</a>
+            <a href="{{ route('admin.skills.index') }}" class="btn btn-secondary">Annuler</a>
         </div>
     </form>
 </x-admin-layout>

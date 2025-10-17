@@ -1,7 +1,7 @@
 <x-admin-layout>
     <div class="flex justify-between items-center mb-8">
         <h1 class="text-4xl font-bold">Gestion des Projets</h1>
-        <a href="{{ route('projects.create') }}" class="btn btn-primary">
+        <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">
             Ajouter un projet
         </a>
     </div>
@@ -15,10 +15,10 @@
                     <p class="text-sm text-gray-400 mt-2">Technologies : {{ $project->technologies }}</p>
                 </div>
                 <div class="flex gap-4">
-                    <a href="{{ route('projects.edit', $project) }}" class="btn btn-secondary">
+                    <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-secondary">
                         Modifier
                     </a>
-                    <form action="{{ route('projects.destroy', $project) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
+                    <form action="{{ route('admin.projects.destroy', $project) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Supprimer</button>

@@ -1,7 +1,7 @@
 <x-admin-layout>
     <div class="flex justify-between items-center mb-8">
         <h1 class="text-4xl font-bold">Gestion des Compétences</h1>
-        <a href="{{ route('skills.create') }}" class="btn btn-primary">
+        <a href="{{ route('admin.skills.create') }}" class="btn btn-primary">
             Ajouter une compétence
         </a>
     </div>
@@ -15,10 +15,10 @@
                     <p class="text-sm text-gray-400 mb-4">Catégorie : {{ $skill->category }}</p>
                 @endif
                 <div class="flex gap-4">
-                    <a href="{{ route('skills.edit', $skill) }}" class="btn btn-secondary text-sm">
+                    <a href="{{ route('admin.skills.edit', $skill) }}" class="btn btn-secondary text-sm">
                         Modifier
                     </a>
-                    <form action="{{ route('skills.destroy', $skill) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
+                    <form action="{{ route('admin.skills.destroy', $skill) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger text-sm">Supprimer</button>
