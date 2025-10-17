@@ -36,7 +36,7 @@ class SkillController extends Controller
 
         Skill::create($request->all());
 
-        return redirect()->route('skills.index')->with('success', 'Compétence créée avec succès.');
+        return redirect()->route('admin.skills.index')->with('success', 'Compétence créée avec succès.');
     }
 
     /**
@@ -70,7 +70,7 @@ class SkillController extends Controller
         $skill = Skill::findOrFail($id);
         $skill->update($request->all());
 
-        return redirect()->route('skills.index')->with('success', 'Compétence mise à jour avec succès.');
+        return redirect()->route('admin.skills.index')->with('success', 'Compétence mise à jour avec succès.');
     }
 
     /**
@@ -81,6 +81,6 @@ class SkillController extends Controller
         $skill = Skill::findOrFail($id);
         $skill->delete();
 
-        return redirect()->route('skills.index')->with('success', 'Compétence supprimée avec succès.');
+        return redirect()->route('admin.skills.index')->with('success', 'Compétence supprimée avec succès.');
     }
 }

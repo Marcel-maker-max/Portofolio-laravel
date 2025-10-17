@@ -51,7 +51,7 @@ class ProjectController extends Controller
 
         Project::create($validated);
 
-        return redirect()->route('projects.index')->with('success', 'Projet créé avec succès!');
+        return redirect()->route('admin.projects.index')->with('success', 'Projet créé avec succès!');
     }
 
     // Admin - Formulaire de modification
@@ -81,7 +81,7 @@ class ProjectController extends Controller
 
         $project->update($validated);
 
-        return redirect()->route('projects.index')->with('success', 'Projet modifié avec succès!');
+        return redirect()->route('admin.projects.index')->with('success', 'Projet modifié avec succès!');
     }
 
     // Admin - Supprimer un projet
@@ -93,6 +93,6 @@ class ProjectController extends Controller
 
         $project->delete();
 
-        return redirect()->route('projects.index')->with('success', 'Projet supprimé avec succès!');
+        return redirect()->route('admin.projects.index')->with('success', 'Projet supprimé avec succès!');
     }
 }

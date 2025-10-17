@@ -23,10 +23,10 @@
                     </p>
                 </div>
                 <div class="flex gap-4 ml-6">
-                    <a href="{{ route('contacts.show', $contact) }}" class="btn btn-secondary">
+                    <a href="{{ route('admin.contacts.show', $contact) }}" class="btn btn-secondary">
                         Voir
                     </a>
-                    <form action="{{ route('contacts.destroy', $contact) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
+                    <form action="{{ route('admin.contacts.destroy', $contact) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Supprimer</button>

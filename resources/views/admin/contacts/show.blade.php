@@ -1,6 +1,6 @@
 <x-admin-layout>
     <div class="mb-8">
-        <a href="{{ route('contacts.admin') }}" class="text-purple-400 hover:text-purple-300 mb-4 inline-block">
+        <a href="{{ route('admin.contacts.index') }}" class="text-purple-400 hover:text-purple-300 mb-4 inline-block">
             ← Retour aux messages
         </a>
     </div>
@@ -33,7 +33,7 @@
             <a href="mailto:{{ $contact->email }}" class="btn btn-primary">
                 📧 Répondre par email
             </a>
-            <form action="{{ route('contacts.destroy', $contact) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
+            <form action="{{ route('admin.contacts.destroy', $contact) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?')">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">🗑️ Supprimer</button>

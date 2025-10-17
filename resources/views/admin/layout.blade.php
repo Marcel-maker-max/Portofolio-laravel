@@ -12,8 +12,8 @@
             <h1 class="text-2xl font-bold text-white">Admin Portfolio</h1>
             <div class="flex gap-6">
                 <a href="{{ route('home') }}" class="nav-link">Voir le site</a>
-                <a href="{{ route('projects.index') }}" class="nav-link">Projets</a>
-                <a href="{{ route('skills.index') }}" class="nav-link">Compétences</a>
+                <a href="{{ route('admin.projects.index') }}" class="nav-link">Projets</a>
+                <a href="{{ route('admin.skills.index') }}" class="nav-link">Compétences</a>
             </div>
         </div>
     </nav>
