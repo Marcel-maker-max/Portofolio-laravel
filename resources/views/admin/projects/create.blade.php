@@ -46,7 +46,7 @@
 
         <div class="flex gap-4">
             <button type="submit" class="btn btn-primary">Créer le projet</button>
-            <a href="{{ route('projects.index') }}" class="btn btn-secondary">Annuler</a>
+            <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Annuler</a>
         </div>
     </form>
 </x-admin-layout>
